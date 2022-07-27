@@ -182,7 +182,12 @@ alias minds-ssr-build=$MINDSROOT/local/ssr-build
 alias minds-ssr-serve=$MINDSROOT/local/ssr-serve
 
 # custom
-alias minds-serve=$MINDSROOT/front/serve.sh
+minds-serve=$MINDSROOT/front/serve.sh
+
+minds-cli() {
+	cd $MINDSROOT
+	docker-compose exec php-fpm php /var/www/Minds/engine/cli.php $@
+}
 
 es-browser() {
   google-chrome --disable-web-security --user-data-dir=~/unsecure-chrome https://dejavu.appbase.io/\?appname\=minds-metrics-\*\&url\=http://localhost:9200\&mode\=edit &
