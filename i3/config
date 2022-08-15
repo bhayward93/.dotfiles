@@ -282,4 +282,5 @@ exec --no-startup-id xautolock -time 10 -locker i3lock
 # allows use of things like gnome tweak tools
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
-
+# print screen
+bindsym Print exec flameshot gui

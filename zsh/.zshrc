@@ -182,7 +182,7 @@ alias minds-ssr-build=$MINDSROOT/local/ssr-build
 alias minds-ssr-serve=$MINDSROOT/local/ssr-serve
 
 # custom
-minds-serve=$MINDSROOT/front/serve.sh
+alias minds-serve=$MINDSROOT/front/serve.sh
 
 minds-cli() {
 	cd $MINDSROOT
@@ -192,6 +192,10 @@ minds-cli() {
 es-browser() {
   google-chrome --disable-web-security --user-data-dir=~/unsecure-chrome https://dejavu.appbase.io/\?appname\=minds-metrics-\*\&url\=http://localhost:9200\&mode\=edit &
 }
+
+# Vitess
+alias vtctlclient="vtctlclient --server localhost:15999 --alsologtostderr"
+alias mysql="mysql -u user -h 127.0.0.1 -p"
 
 # bin/quotes
 #echo "Linus Quote:"
