@@ -7,9 +7,9 @@ plugins=(
 	git
 	auto-notify
 	zsh-nvm
+	kubectl
 	bash-quote
 	linus-rants
-	#hacker-quotes
 )
 
 
@@ -150,6 +150,7 @@ alias dlog="dlogs"
 alias dexecp="cd ~/work/minds && docker-compose exec php-fpm php /var/www/Minds/engine/cli.php"
 
 # kubectl / k8s
+alias k=kubectl
 alias kpods="kubectl get pods | grep"
 alias kexec="kubectl exec -it"
 alias klogs="kubectl logs -f"
@@ -193,10 +194,13 @@ es-browser() {
   google-chrome --disable-web-security --user-data-dir=~/unsecure-chrome https://dejavu.appbase.io/\?appname\=minds-metrics-\*\&url\=http://localhost:9200\&mode\=edit &
 }
 
+# Calico
+alias calicoctl="calicoctl --allow-version-mismatch"
+
 # Vitess
 alias vtctlclient="vtctlclient --server localhost:15999 --alsologtostderr"
 alias mysql="mysql -u user -h 127.0.0.1 -p"
-
+alias mysqlsh="mysql -u user -h 127.0.0.1 -P 15306"
 # bin/quotes
 #echo "Linus Quote:"
 #cd /home/nemo/personal/linus/ && ./random-quote.sh && cd ~
@@ -209,4 +213,3 @@ eval $(thefuck --alias)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-
