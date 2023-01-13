@@ -8,6 +8,7 @@ plugins=(
 	auto-notify
 	zsh-nvm
 	kubectl
+	kube-ps1
 	bash-quote
 	linus-rants
 )
@@ -213,3 +214,4 @@ eval $(thefuck --alias)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"

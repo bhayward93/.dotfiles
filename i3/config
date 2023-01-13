@@ -284,3 +284,6 @@ exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 
 # print screen
 bindsym Print exec flameshot gui
+
+# notification daemon
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc 
