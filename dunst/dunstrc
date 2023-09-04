@@ -1,3 +1,5 @@
+# https://github.com/dunst-project/dunst/blob/master/dunstrc
+
 [global]
     font = "Hack 10"
     allow_markup = yes
@@ -22,9 +24,10 @@
     separator_color = "#585858"
     startup_notification = false
     icon_position = left
-    icon_folders = /usr/share/icons/elementary/actions/16/
+    # icon_folders = /usr/share/icons/elementary/actions/16/
+    # icon_theme = "Adwaita, breeze"
     max_icon_size = 50
-    mouse_left_click=do_action
+    mouse_middle_click=do_action, close_current
 [frame]
     width = 1
     color = "#83a598"
@@ -43,7 +46,7 @@
 [urgency_normal]
     background = "#282828"
     foreground = "#ebdbb2"
-    timeout = 20
+    timeout = 10
 
 [urgency_critical]
     background = "#282828"
