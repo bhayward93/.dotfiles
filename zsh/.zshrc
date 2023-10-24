@@ -167,6 +167,7 @@ alias hgrep='history | grep'
 
 alias minds='~/work/minds/local/local'
 
+alias tg='terragrunt'
 
 # Minds-related variables, aliases and functions
 export DEVELOPMENT=/home/nemo/work
@@ -218,3 +219,11 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 # OCI auth
 export OCI_CLI_AUTH=security_token
+
+# kube_ps1 https://github.com/jonmosco/kube-ps1
+# zsh theming https://gist.github.com/zulhfreelancer/c7a214a57761ea1f2195a06bc6e3dd1a
+PROMPT=$PROMPT'${reset_color}$fg[blue]%Bk8s:%b$(kube_ps1)${reset_color} %B$%b '
+
+KUBE_PS1_NS_ENABLE=false
+KUBE_PS1_SYMBOL_ENABLE=false
+KUBE_PS1_DIVIDER=''
