@@ -1,9 +1,4 @@
 /** Basic config file **/
 
-configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
-  theme: "launchers/text/style_7.rasi";
-}
-
+@theme "launchers/text/style_7.rasi"
 @theme "launchers/text/styles/gotham.rasi"

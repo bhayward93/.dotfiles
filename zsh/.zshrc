@@ -8,7 +8,7 @@ plugins=(
 	auto-notify
 	zsh-nvm
 	kubectl
-	kube-ps1
+#	kube-ps1
 	bash-quote
 	linus-rants
 )
@@ -210,9 +210,6 @@ alias mysqlsh="mysql -u user -h 127.0.0.1 -P 15306"
 #
 export FZF_DEFAULT_COMMAND='rg --files --follow --hidden'
 
-# the fuck
-eval $(thefuck --alias) 
-
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
@@ -222,7 +219,7 @@ export OCI_CLI_AUTH=security_token
 
 # kube_ps1 https://github.com/jonmosco/kube-ps1
 # zsh theming https://gist.github.com/zulhfreelancer/c7a214a57761ea1f2195a06bc6e3dd1a
-PROMPT=$PROMPT'${reset_color}$fg[blue]%Bk8s:%b$(kube_ps1)${reset_color} %B$%b '
+# PROMPT=$PROMPT'${reset_color}$fg[blue]%Bk8s:%b$(kube_ps1)${reset_color} %B$%b '
 
 KUBE_PS1_NS_ENABLE=false
 KUBE_PS1_SYMBOL_ENABLE=false
